@@ -62,6 +62,6 @@ Note: the previous quantity for "Lego Star Wars" was 5,500.
    * mySQL
    * Inquirer
    * Table-cli
-4. mySQL
+4. mySQL Workbench
 
 
