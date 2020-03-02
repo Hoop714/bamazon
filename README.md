@@ -12,11 +12,13 @@ BAMAZON is an Amazon-like storefront created with a mySQL database.  The app tak
 When the BAMAZON Customer script is run, a table with all available products is first displayed:
 
 *Example*:
+
 ![image1](https://github.com/Hoop714/bamazon/blob/master/images/bamazonCustomer1.PNG?raw=true)
 
 After the customer sees the product list, they are required to input the Item ID they wish to purchase and how many of that item they wish to purchase from that list. Once inputted, the total cost for the product is posted:
 
 *Example*:
+
 ![image2](https://github.com/Hoop714/bamazon/blob/master/images/bamazonCustomer2.PNG?raw=true)
 
 The user's order also reduces the inventory available for that particular product.
@@ -29,21 +31,25 @@ The user is then able to add an additional product for purchase if they wish to 
 The BAMAZON Manger script allows a manager to run four different functions. Each function is described below.
 
 *Example*:
+
 ![image3](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager1.PNG?raw=true)
 
 1. **View Products for Sale**: Allows a manager to view all available products:
 
 *Example*:
+
 ![image4](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager2.PNG?raw=true)
 
 2. **View Low Inventory**: Allows a manager to view any products where the inventory is low. This function will query for all products where the inventory is less than 2,000.
 
 *Example*:
+
 ![image5](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager3.PNG?raw=true)
 
 3. **Add to Inventory**: Allows a manager to add inventory for a particular product. When inventory is added, the Quantity field for that particular product will increase.
 
 *Example*:
+
 ![image6](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager4.PNG?raw=true)
 
 Note: the previous quantity for "Lego Star Wars" was 5,500.
@@ -51,6 +57,7 @@ Note: the previous quantity for "Lego Star Wars" was 5,500.
 4. **Add New Product**: Allows a manager to add an entirely new product to the inventory. In the below example, 'The Pragmatic Programmer' was added.
 
 *Example*:
+
 ![image4](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager5.PNG?raw=true)
 
 ---
