@@ -2,40 +2,56 @@
 
 ---
 
-Welcome to the LIRI Node App! LIRI is the sister to Apple's SIRI App. While SIRI is a Speech Interpretation and Recognition Interface, LIRI is a **Language** Interpretation and Recognition Interface. 
+Welcome to BAMAZON! 
 
-LIRI allows a user to input a command and returns the information that the user is requesting. There are four commands the user may input. Each command is described below.
+BAMAZON is an Amazon-like storefront created with a mySQL database.  The app takes in orders from customers and deplete stock from the store's inventory. There is also a Manager page that allows a manager to view products, view products with low inventory, add to inventory, and add a new product.
 
 ---
-## LIRI Commands
+## Bamazon Customer
 
-1. **Concert-This**: user inputs a band name/artist into the command line following the concert-this argument. The Axios node module then sends a request to the Bands In Town API. A list of all upcoming concerts for that artist will be returned. If no band name/artist is entered, a message will be received notifying the user. If there are no upcoming events for the artist, the user will be notified as well.
-
-*Command line input*: node liri.js concert-this <'band/artist'>
+When the BAMAZON Customer script is run, a table with all available products is first displayed:
 
 *Example*:
-![image1](https://github.com/Hoop714/liri-node-app/blob/master/images/concert-this.PNG?raw=true)
+![image1](https://github.com/Hoop714/bamazon/blob/master/images/bamazonCustomer1.PNG?raw=true)
 
-2. **Spotify-This-Song**: user inputs a song name into the command line following the spotify-this-song argument. The Node-Spotify-API module sends a request to the Spotify API. Information about the song will be returned. If no song is added to the command line, information for 'The Sign' by Ace of Base will be returned. 
-
-*Command line input*: node liri.js spotify-this-song <'song name'>
+After the customer sees the product list, they are required to input the Item ID they wish to purchase and how many of that item they wish to purchase from that list. Once inputted, the total cost for the product is posted:
 
 *Example*:
-![image2](https://github.com/Hoop714/liri-node-app/blob/master/images/spotify-this-song.PNG?raw=true)
+![image2](https://github.com/Hoop714/bamazon/blob/master/images/bamazonCustomer2.PNG?raw=true)
 
-3. **Movie-This**: user inputs a movie into the command line following the movie-this argument. The Axios node module then sends a request to the OMDB API. Information about the movie will be returned. If no movie is entered into the command line, the information for 'Mr. Nobody' will be returned. 
+The user's order also reduces the inventory available for that particular product.
 
-*Command line input*: node liri.js movie-this <'movie name'>
+The user is then able to add an additional product for purchase if they wish to do so.
 
-*Example*:
-![image3](https://github.com/Hoop714/liri-node-app/blob/master/images/movie-this.PNG?raw=true)
+---
+## Bamazon Manager
 
-4. **Do-What-It-Says**: user does not need to input an argument following the do-what-it-says argument. This function sources the random.txt file for a song name. After the information from random.txt is grabbed, the spotify-this-song function is called. Information about the song on the random.txt file is returned.
-
-*Command line input*: node liri.js do-what-it-says
+The BAMAZON Manger script allows a manager to run four different functions. Each function is described below.
 
 *Example*:
-![image4](https://github.com/Hoop714/liri-node-app/blob/master/images/do-what-it-says.PNG?raw=true)
+![image3](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager1.PNG?raw=true)
+
+1. **View Products for Sale**: Allows a manager to view all available products:
+
+*Example*:
+![image4](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager2.PNG?raw=true)
+
+2. **View Low Inventory**: Allows a manager to view any products where the inventory is low. This function will query for all products where the inventory is less than 2,000.
+
+*Example*:
+![image5](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager3.PNG?raw=true)
+
+3. **Add to Inventory**: Allows a manager to add inventory for a particular product. When inventory is added, the Quantity field for that particular product will increase.
+
+*Example*:
+![image6](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager4.PNG?raw=true)
+
+Note: the previous quantity for "Lego Star Wars" was 5,500.
+
+4. **Add New Product**: Allows a manager to add an entirely new product to the inventory. In the below example, 'The Pragmatic Programmer' was added.
+
+*Example*:
+![image4](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager5.PNG?raw=true)
 
 ---
 ## Technologies Used
@@ -43,11 +59,9 @@ LIRI allows a user to input a command and returns the information that the user 
 1. Javascript
 2. JSON
 3. Multiple Node Modules
-   * Node-Spotify-API
-   * Axios
-   * Moment
-   * DotEnv
-4. Bands In Town API
-5. OMDB API
+   * mySQL
+   * Inquirer
+   * Table-cli
+4. mySQL
 
 
