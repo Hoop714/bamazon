@@ -81,7 +81,7 @@ function viewLow() {
         inquirer.prompt([{
             name: "confirm",
             type: "confirm",
-            message: "Return to main menu?"
+            message: "Return to main menu?" 
         }]).then(function(answers) {
             if (answers.confirm === true) {
                 displayManagerOptions();

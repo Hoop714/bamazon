@@ -42,4 +42,18 @@ VALUES ("2-in-1 Leather Recliner", "Home & Kitchen", "389.000", "2000");
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Frame Computer Desk", "Home & Kitchen", "39.55", "3000");
 
-SELECT * FROM bamazon;
+
+CREATE TABLE Departments(
+    department_ID MEDIUMINT AUTO_INCREMENT NOT NULL,
+    department_Name VARCHAR(50) NOT NULL,
+    overheadCosts DECIMAL(10,2) NOT NULL,
+    totalSales DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY(department_ID));
+
+
+INSERT INTO Departments(department_Name, overheadCosts, totalSales)
+VALUES ('ENTERTAINMENT', 500000.00, 20000.00),
+    ('Sports', 200000.00, 18000.00),
+    ('Books', 100000.00, 8000.00),
+    ('Toys', 300000.00, 10000.00),
+    ('Electronics', 300000.00, 10000.00);
