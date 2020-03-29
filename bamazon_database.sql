@@ -57,3 +57,6 @@ VALUES ('ENTERTAINMENT', 500000.00, 20000.00),
     ('Books', 100000.00, 8000.00),
     ('Toys', 300000.00, 10000.00),
     ('Electronics', 300000.00, 10000.00);
+
+    
+ALTER TABLE Departments ADD COLUMN product_sales DECIMAL(7,2) DEFAULT '0.00';

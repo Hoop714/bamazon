@@ -58,8 +58,28 @@ Note: the previous quantity for "Lego Star Wars" was 5,500.
 
 *Example*:
 
-![image4](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager5.PNG?raw=true)
+![image7](https://github.com/Hoop714/bamazon/blob/master/images/bamazonManager5.PNG?raw=true)
 
+---
+## Bamazon Supervisor
+
+The BAMAZON Supervisor script allows a Supervisor to view Product Sales by Department, and create a New Department. Both functions are described below.
+
+*Example*:
+
+![image8](https://github.com/Hoop714/bamazon/blob/master/images/bamazonSupervisor1.PNG?raw=true)
+
+1. **View Products Sales by Department**: Allows a Supervisor to view all available the total costs and sales by each department. The profit is also calculated:
+
+*Example*:
+
+![image9](https://github.com/Hoop714/bamazon/blob/master/images/bamazonSupervisor2.PNG?raw=true)
+
+2. **Create New Department**: Allows a manager to view any products where the inventory is low. This function will query for all products where the inventory is less than 2,000.
+
+*Example*:
+
+![image10](https://github.com/Hoop714/bamazon/blob/master/images/bamazonSupervisor3.PNG?raw=true)
 ---
 ## Technologies Used
 

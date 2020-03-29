@@ -40,12 +40,13 @@ function viewSalesByDept(){
   connection.query('SELECT * FROM Departments', function(err, res){
     if(err) throw err;
     var theDisplayTable = new Table({
-        head: ['ID', 'Department Name', 'Overhead Costs', 'Total Slaes'],
-        colWidths: [10, 30, 18, 14]
+        head: ['ID', 'Department Name', 'Overhead Costs', 'Total Sales', 'Total Profits'],
+        colWidths: [10, 30, 18, 18, 18]
     });
     for (i = 0; i < res.length; i++) {
+      var totalProfits = res[i].totalSales - res[i].overheadCosts;
         theDisplayTable.push(
-            [res[i].department_ID, res[i].department_Name, res[i].overheadCosts, res[i].totalSales]
+            [res[i].department_ID, res[i].department_Name, res[i].overheadCosts, res[i].totalSales, totalProfits]
         );
     }
     console.log(theDisplayTable.toString());
@@ -83,14 +84,13 @@ function viewSalesByDept(){
     }
     ]).then(function(ans){
       connection.query('INSERT INTO Departments SET ?',{
-        department_Name: ans.deptName,
-        overheadCosts: ans.overHeadCost,
-        totalSales: ans.prodSales
-      }, 
-      function(err, res){
+        Department_Name: ans.deptName,
+        OverHeadCosts: ans.overHeadCost,
+        TotalSales: ans.prodSales
+      }, function(err, res){
         if(err) throw err;
-      }
-      )
+      })
+      
       start();
     });
   }
