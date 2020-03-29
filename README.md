@@ -75,7 +75,7 @@ The BAMAZON Supervisor script allows a Supervisor to view Product Sales by Depar
 
 ![image9](https://github.com/Hoop714/bamazon/blob/master/images/bamazonSupervisor2.PNG?raw=true)
 
-2. **Create New Department**: Allows a manager to view any products where the inventory is low. This function will query for all products where the inventory is less than 2,000.
+2. **Create New Department**: Allows a Supervisor to add a new Department, with overhead costs and total sales included:
 
 *Example*:
 
